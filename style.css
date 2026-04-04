@@ -325,6 +325,7 @@ nav {
   color: var(--ink2);
   font-style: italic;
   flex: 1;
+  white-space: pre-line;
 }
 
 .work-nav {

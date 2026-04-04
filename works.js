@@ -215,9 +215,9 @@ const WORKS = [
     title: { en: 'Plate', zh: '盤中蜂鳥', ja: '皿の中の蜂鳥' },
     meta: 'Eastern gouache, mixed media on paper · 2024',
     note: {
-      en: '',
-      zh: '',
-      ja: '',
+      en: 'Whenever my heartbeat matches the rhythm of a hummingbird\'s wings,\nI want to place my heart on a plate and offer it forward.',
+      zh: '每當我的心跳與蜂鳥的翅膀頻率相合，\n我便想將心臟盛在盤中，奉獻出去。',
+      ja: '蜂鳥の羽ばたきと私の鼓動が重なるとき、\n心臓を皿に載せて差し出したくなる。',
     },
   },
   {
