@@ -326,10 +326,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Back / brand navigation
   document.getElementById('backBtn').addEventListener('click', closeWork);
   document.getElementById('brandLink').addEventListener('click', () => {
-    if (document.getElementById('workPage').style.display !== 'none') closeWork();
-    if (document.getElementById('infoPage').style.display  !== 'none') {
+    if (document.getElementById('workPage').style.display !== 'none') {
+      closeWork();
+    } else if (document.getElementById('infoPage').style.display !== 'none') {
       document.getElementById('infoPage').style.display  = 'none';
       document.getElementById('indexPage').style.display = 'block';
+      document.querySelectorAll('.nav-center li').forEach(l => l.classList.remove('active'));
+      document.querySelector('.nav-center li[data-i18n="nav.works"]').classList.add('active');
     }
   });
 
