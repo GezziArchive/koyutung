@@ -227,10 +227,7 @@ function openWork(idx) {
     onComplete: () => {
       indexPage.style.display = 'none';
       workPage.style.display  = 'block';
-      gsap.set('#bookLeft',  { rotateY: -10, opacity: 0, transformPerspective: 1200 });
-      gsap.set('#bookRight', { rotateY:   7, opacity: 0, transformPerspective: 1200 });
-      gsap.to('#bookLeft',  { rotateY: 0, opacity: 1, duration: 0.6, ease: 'power3.out' });
-      gsap.to('#bookRight', { rotateY: 0, opacity: 1, duration: 0.6, ease: 'power3.out', delay: 0.07 });
+      gsap.fromTo(['#bookLeft', '#bookRight'], { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' });
     },
   });
 }
@@ -303,10 +300,34 @@ document.addEventListener('DOMContentLoaded', () => {
     { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', stagger: 0.038, delay: 0.85 },
   );
 
+  // Nav: Works / Info
+  document.querySelectorAll('.nav-center li').forEach(li => {
+    li.addEventListener('click', () => {
+      const key = li.dataset.i18n;
+      if (key === 'nav.works') {
+        document.getElementById('infoPage').style.display  = 'none';
+        document.getElementById('workPage').style.display  = 'none';
+        document.getElementById('indexPage').style.display = 'block';
+        document.querySelectorAll('.nav-center li').forEach(l => l.classList.remove('active'));
+        li.classList.add('active');
+      } else if (key === 'nav.info') {
+        document.getElementById('workPage').style.display  = 'none';
+        document.getElementById('indexPage').style.display = 'none';
+        document.getElementById('infoPage').style.display  = 'block';
+        document.querySelectorAll('.nav-center li').forEach(l => l.classList.remove('active'));
+        li.classList.add('active');
+      }
+    });
+  });
+
   // Back / brand navigation
   document.getElementById('backBtn').addEventListener('click', closeWork);
   document.getElementById('brandLink').addEventListener('click', () => {
     if (document.getElementById('workPage').style.display !== 'none') closeWork();
+    if (document.getElementById('infoPage').style.display  !== 'none') {
+      document.getElementById('infoPage').style.display  = 'none';
+      document.getElementById('indexPage').style.display = 'block';
+    }
   });
 
   // Work prev / next
