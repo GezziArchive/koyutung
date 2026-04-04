@@ -545,6 +545,25 @@ nav {
   color: var(--ink2);
 }
 
+/* ── FOOTER ── */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 14px 36px;
+  border-top: 1px solid var(--border);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--ink3);
+}
+
+.footer-note {
+  font-style: italic;
+  text-align: right;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav { padding: 16px 20px 14px; }
