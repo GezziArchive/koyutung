@@ -305,9 +305,12 @@ document.addEventListener('DOMContentLoaded', () => {
     li.addEventListener('click', () => {
       const key = li.dataset.i18n;
       if (key === 'nav.works') {
-        document.getElementById('infoPage').style.display  = 'none';
-        document.getElementById('workPage').style.display  = 'none';
-        document.getElementById('indexPage').style.display = 'block';
+        if (document.getElementById('workPage').style.display !== 'none') {
+          closeWork();
+        } else {
+          document.getElementById('infoPage').style.display  = 'none';
+          document.getElementById('indexPage').style.display = 'block';
+        }
         document.querySelectorAll('.nav-center li').forEach(l => l.classList.remove('active'));
         li.classList.add('active');
       } else if (key === 'nav.info') {
