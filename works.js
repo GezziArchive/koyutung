@@ -4,10 +4,10 @@
 // ║                                                              ║
 // ║  📌 每件作品的欄位說明                                        ║
 // ║                                                              ║
-// ║  image:  'Filename.png'                                      ║
+// ║  image:  'Filename.webp'                                      ║
 // ║          gallery 封面縮圖，放在 images/ 資料夾裡              ║
 // ║                                                              ║
-// ║  images: ['File1.png', 'File2.png', 'File3.png']            ║
+// ║  images: ['File1.webp', 'File2.webp', 'File3.webp']            ║
 // ║          書頁裡可左右滑動的圖片陣列                           ║
 // ║          ★ 不填這欄 → 只顯示單張，不出現切換按鈕             ║
 // ║          ★ 填了就會出現 ‹ › 按鈕，可以滑動                   ║
@@ -34,8 +34,8 @@
 
 const WORKS = [
   {
-    image: 'Offering1.png',
-    images: ['Offering1.png', 'Offering2.png', 'Offering3.png', 'Offering4.JPEG'],
+    image: 'Offering1.webp',
+    images: ['Offering1.webp', 'Offering2.webp', 'Offering3.webp', 'Offering4.webp'],
     ratio: 'tall',
     tag: 'Sculpture',
     title: { en: 'Offering', zh: '祈', ja: '祈り' },
@@ -47,8 +47,8 @@ const WORKS = [
     },
   },
   {
-    image: 'Birdbath.png',
-    images: ['Birdbath.png', 'Birdbath.jpeg'],
+    image: 'Birdbath.webp',
+    images: ['Birdbath.webp', 'Birdbath.webp'],
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'Birdbath', zh: '鳥浴池', ja: '水浴び場' },
@@ -60,7 +60,7 @@ const WORKS = [
     },
   },
   {
-    image: 'Black_Narcissus.png',
+    image: 'Black_Narcissus.webp',
     ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'Black Narcissus', zh: '黑水仙', ja: '黒い水仙' },
@@ -72,7 +72,7 @@ const WORKS = [
     },
   },
   {
-    image: 'Carousel_and_the_North_Star.png',
+    image: 'Carousel_and_the_North_Star.webp',
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'Carousel and the North Star', zh: '木馬與北極星', ja: '回転木馬と北極星' },
@@ -84,8 +84,8 @@ const WORKS = [
     },
   },
   {
-    image: 'Consanguine_Salome.png',
-    images: ['Consanguine_Salome.png', 'Consanguine_Salome_Detail.JPG', 'Consanguine_Salome_Detail2.jpg'],
+    image: 'Consanguine_Salome.webp',
+    images: ['Consanguine_Salome.webp', 'Consanguine_Salome_Detail.webp', 'Consanguine_Salome_Detail2.webp'],
     ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Consanguine Salome', zh: '同源莎樂美', ja: '同血のサロメ' },
@@ -97,8 +97,8 @@ const WORKS = [
     },
   },
   {
-    image: 'D_Major.png',
-    images: ['D_Major.png', 'D_Major_Detail.jpg', 'D_Major_Detail2.jpg'],
+    image: 'D_Major.webp',
+    images: ['D_Major.webp', 'D_Major_Detail.webp', 'D_Major_Detail2.webp'],
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'D Major', zh: 'D大調', ja: 'ニ長調' },
@@ -110,7 +110,7 @@ const WORKS = [
     },
   },
   {
-    image: 'Dracula.png',
+    image: 'Dracula.webp',
     ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Dracula', zh: '德古拉', ja: 'ドラキュラ' },
@@ -122,7 +122,7 @@ const WORKS = [
     },
   },
   {
-    image: 'Everlasting_Rose.png',
+    image: 'Everlasting_Rose.webp',
     ratio: 'tall',
     tag: 'Sculpture',
     title: { en: 'Everlasting Rose', zh: '永生玫瑰', ja: '永遠の薔薇' },
@@ -134,7 +134,7 @@ const WORKS = [
     },
   },
   {
-    image: 'Falling_into_a_Tumultuous_Dream.png',
+    image: 'Falling_into_a_Tumultuous_Dream.webp',
     ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'Falling into a Tumultuous Dream', zh: '墜入喧囂的夢境', ja: '喧騒の夢へと落ちる' },
@@ -146,7 +146,7 @@ const WORKS = [
     },
   },
   {
-    image: 'Ferns_Growing_Between_Bricks.png',
+    image: 'Ferns_Growing_Between_Bricks.webp',
     ratio: 'wide',
     tag: 'Fine Art',
     title: { en: 'Ferns Growing Between Bricks', zh: '磚縫中生長的蕨', ja: '煉瓦の隙間に育つシダ' },
@@ -158,7 +158,7 @@ const WORKS = [
     },
   },
   {
-    image: 'Klamm.png',
+    image: 'Klamm.webp',
     ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'Klamm', zh: '克拉姆', ja: 'クラム' },
@@ -170,8 +170,8 @@ const WORKS = [
     },
   },
   {
-    image: 'Lavender_Frostfall.png',
-    images: ['Lavender_Frostfall.png', 'Lavender_Frostfall_Detail.jpg'],
+    image: 'Lavender_Frostfall.webp',
+    images: ['Lavender_Frostfall.webp', 'Lavender_Frostfall_Detail.webp'],
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'Lavender Frostfall', zh: '薰衣草色的霜降', ja: 'ラベンダー色の霜降り' },
@@ -183,8 +183,8 @@ const WORKS = [
     },
   },
   {
-    image: 'Obsidian_Gleam.png',
-    images: ['Obsidian_Gleam.png', 'Obsidian_Gleam_Detail.JPEG', 'Obsidian_Gleam_Detail1.jpg'],
+    image: 'Obsidian_Gleam.webp',
+    images: ['Obsidian_Gleam.webp', 'Obsidian_Gleam_Detail.webp', 'Obsidian_Gleam_Detail1.webp'],
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'Obsidian Gleam', zh: '曜', ja: '曜' },
@@ -196,8 +196,8 @@ const WORKS = [
     },
   },
   {
-    image: 'Packing1.png',
-    images: ['Packing1.png', 'Packing2.png', 'Packing_Detail2.JPEG'],
+    image: 'Packing1.webp',
+    images: ['Packing1.webp', 'Packing2.webp', 'Packing_Detail2.webp'],
     ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'Packing', zh: '打包', ja: '荷造り' },
@@ -209,8 +209,8 @@ const WORKS = [
     },
   },
   {
-    image: 'Spinning.png',
-    images: ['Spinning.png', 'Spinning_Detail.jpeg', 'Spinning_Detail2.JPEG'],
+    image: 'Spinning.webp',
+    images: ['Spinning.webp', 'Spinning_Detail.webp', 'Spinning_Detail2.webp'],
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'Spinning', zh: '眩暈', ja: '眩暈' },
@@ -222,7 +222,7 @@ const WORKS = [
     },
   },
   {
-    image: 'Starshard.png',
+    image: 'Starshard.webp',
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'Starshard', zh: '星芒', ja: '星芒' },
@@ -234,7 +234,7 @@ const WORKS = [
     },
   },
   {
-    image: 'The_Garden_of_Forking_Paths.png',
+    image: 'The_Garden_of_Forking_Paths.webp',
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'The Garden of Forking Paths', zh: '小徑分岔的花園', ja: '岐路の庭' },
@@ -246,8 +246,8 @@ const WORKS = [
     },
   },
   {
-    image: 'The_Guardian_Under_the_Bed.png',
-    images: ['The_Guardian_Under_the_Bed.png', 'The_Guardian_Under_the_Bed_Detail.PNG'],
+    image: 'The_Guardian_Under_the_Bed.webp',
+    images: ['The_Guardian_Under_the_Bed.webp', 'The_Guardian_Under_the_Bed_Detail.webp'],
     ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'The Guardian Under the Bed', zh: '床底的守護者', ja: 'ベッドの下の守護者' },
@@ -259,8 +259,8 @@ const WORKS = [
     },
   },
   {
-    image: 'Transfigured_Love.png',
-    images: ['Transfigured_Love.png', 'Transfigured_Love_Process.jpg'],
+    image: 'Transfigured_Love.webp',
+    images: ['Transfigured_Love.webp', 'Transfigured_Love_Process.webp'],
     ratio: 'sq',
     tag: 'Printmaking',
     title: { en: 'Transfigured Love', zh: '變相之愛', ja: '変容する愛' },
@@ -272,8 +272,8 @@ const WORKS = [
     },
   },
   {
-    image: 'Veil.png',
-    images: ['Veil.png', 'Veil_Detail.PNG'],
+    image: 'Veil.webp',
+    images: ['Veil.webp', 'Veil_Detail.webp'],
     ratio: 'wide',
     tag: 'Fine Art',
     title: { en: 'Veil', zh: '面紗', ja: 'ヴェール' },
@@ -285,7 +285,7 @@ const WORKS = [
     },
   },
   {
-    image: 'Violet.png',
+    image: 'Violet.webp',
     ratio: 'wide',
     tag: 'Fine Art',
     title: { en: 'Violet', zh: '紫羅蘭', ja: '菫' },
@@ -297,7 +297,7 @@ const WORKS = [
     },
   },
   {
-    image: 'Water_Mirror.png',
+    image: 'Water_Mirror.webp',
     ratio: 'wide',
     tag: 'Fine Art',
     title: { en: 'Water Mirror', zh: '水鏡', ja: '水鏡' },
@@ -309,7 +309,7 @@ const WORKS = [
     },
   },
   {
-    image: 'White_Horse_on_the_Snowfield.png',
+    image: 'White_Horse_on_the_Snowfield.webp',
     ratio: 'wide',
     tag: 'Fine Art',
     title: { en: 'White Horse on the Snowfield', zh: '白馬與雪原', ja: '雪原の白馬' },
@@ -321,7 +321,7 @@ const WORKS = [
     },
   },
   {
-    image: 'She_Migrates.png',
+    image: 'She_Migrates.webp',
     ratio: 'wide',
     tag: 'Fine Art',
     title: { en: 'She Migrates', zh: '她遷徙', ja: '彼女は移住する' },
@@ -333,8 +333,8 @@ const WORKS = [
     },
   },
   {
-    image: 'She_is_Coral.png',
-    images: ['She_is_Coral.png', 'She_is_Coral_Poster.JPG', 'She_is_Coral_Detail.JPG'],
+    image: 'She_is_Coral.webp',
+    images: ['She_is_Coral.webp', 'She_is_Coral_Poster.webp', 'She_is_Coral_Detail.webp'],
     ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'She is Coral', zh: '她是珊瑚', ja: '彼女は珊瑚' },
@@ -346,8 +346,8 @@ const WORKS = [
     },
   },
   {
-    image: 'She_Declares.png',
-    images: ['She_Declares.png', 'She_Declares_Detail.JPG'],
+    image: 'She_Declares.webp',
+    images: ['She_Declares.webp', 'She_Declares_Detail.webp'],
     ratio: 'wide',
     tag: 'Fine Art',
     title: { en: 'She Declares', zh: '她宣示', ja: '彼女は宣言する' },
@@ -359,8 +359,8 @@ const WORKS = [
     },
   },
   {
-    image: 'Chant_of_Sibilant.png',
-    images: ['Chant_of_Sibilant.png', 'Chant_of_Sibilant_Detail.jpg'],
+    image: 'Chant_of_Sibilant.webp',
+    images: ['Chant_of_Sibilant.webp', 'Chant_of_Sibilant_Detail.webp'],
     ratio: 'wide',
     tag: 'Fine Art',
     title: { en: 'Sibilant Chant', zh: '嘶音', ja: 'シビラント・チャント' },
@@ -372,8 +372,8 @@ const WORKS = [
     },
   },
   {
-    image: 'She_Has_Witnessed.png',
-    images: ['She_Has_Witnessed.png', 'She_Has_Witnessed_Detail.jpg'],
+    image: 'She_Has_Witnessed.webp',
+    images: ['She_Has_Witnessed.webp', 'She_Has_Witnessed_Detail.webp'],
     ratio: 'wide',
     tag: 'Fine Art',
     title: { en: 'She Witnesses', zh: '她見證', ja: '彼女は目撃する' },
@@ -385,7 +385,7 @@ const WORKS = [
     },
   },
   {
-    image: 'She_Looks.png',
+    image: 'She_Looks.webp',
     ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'She Gazes', zh: '她看', ja: '彼女は見つめる' },
@@ -398,7 +398,7 @@ const WORKS = [
   },
   // ── 以下三件下次放 ──────────────────────────
   // {
-  //   image: 'XXX.png',
+  //   image: 'XXX.webp',
   //   ratio: 'sq',
   //   tag: 'Fine Art',
   //   title: { en: '', zh: '', ja: '' },
@@ -407,8 +407,8 @@ const WORKS = [
   // },
 
   {
-    image: '1995_Summer.JPEG',
-    images: ['1995_Summer.JPEG', '1995_Summer_Detail.JPG'],
+    image: '1995_Summer.webp',
+    images: ['1995_Summer.webp', '1995_Summer_Detail.webp'],
     ratio: 'tall',
     tag: 'Fine Art',
     title: { en: '1995 Summer', zh: '1995年夏', ja: '1995年の夏' },
@@ -420,8 +420,8 @@ const WORKS = [
     },
   },
   {
-    image: 'A_Mothers_Dominion.jpeg',
-    images: ['A_Mothers_Dominion.jpeg', 'A_Mothers_Dominion_Process.png'],
+    image: 'A_Mothers_Dominion.webp',
+    images: ['A_Mothers_Dominion.webp', 'A_Mothers_Dominion_Process.webp'],
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'A Mother\'s Dominion', zh: '一個母親的支配', ja: '母親の支配' },
@@ -429,8 +429,8 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'Long_Rest.jpeg',
-    images: ['Long_Rest.jpeg', 'Long_Rest_1.jpg', 'Long_Rest_2.JPEG'],
+    image: 'Long_Rest.webp',
+    images: ['Long_Rest.webp', 'Long_Rest_1.webp', 'Long_Rest_2.webp'],
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'Long Rest', zh: '長憩', ja: '長い休息' },
@@ -438,8 +438,8 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'Jewish_Woman_and_Sheep.png',
-    images: ['Jewish_Woman_and_Sheep.png', 'Jewish_Woman_and_Sheep_Detail.PNG'],
+    image: 'Jewish_Woman_and_Sheep.webp',
+    images: ['Jewish_Woman_and_Sheep.webp', 'Jewish_Woman_and_Sheep_Detail.webp'],
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'Jewish Woman and Sheep', zh: '猶太女人與羊', ja: 'ユダヤの女性と羊' },
@@ -447,8 +447,8 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'Woman_and_White_Horse.JPG',
-    images: ['Woman_and_White_Horse.JPG', 'Woman_and_White_Horse_Detail.JPG', 'Woman_and_White_Horse_2.JPG'],
+    image: 'Woman_and_White_Horse.webp',
+    images: ['Woman_and_White_Horse.webp', 'Woman_and_White_Horse_Detail.webp', 'Woman_and_White_Horse_2.webp'],
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'Woman and White Horse', zh: '女人與白馬', ja: '女性と白馬' },
@@ -456,8 +456,8 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'Ashen_Carnival_Exhibition.jpeg',
-    images: ['Ashen_Carnival_Exhibition.jpeg', 'Ashen_Carnival_Exhibition_Details.jpg'],
+    image: 'Ashen_Carnival_Exhibition.webp',
+    images: ['Ashen_Carnival_Exhibition.webp', 'Ashen_Carnival_Exhibition_Details.webp'],
     ratio: 'wide',
     tag: 'Exhibition',
     title: { en: 'Ashen Carnival Exhibition', zh: '沉默嘉年展覽', ja: '沈黙の嘉年華展覧' },
@@ -465,8 +465,8 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'Artist_Photo_Color.JPG',
-    images: ['Artist_Photo_Color.JPG', 'Artist_Photo_BW.jpeg', 'Artist_CV_Photo.JPG'],
+    image: 'Artist_Photo_Color.webp',
+    images: ['Artist_Photo_Color.webp', 'Artist_Photo_BW.webp', 'Artist_CV_Photo.webp'],
     ratio: 'port',
     tag: 'Artist',
     title: { en: 'Artist Photos', zh: '藝術家個人照片', ja: 'アーティスト写真' },
@@ -474,8 +474,8 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'Halcyon_Being_Exhibition_A_Mothers_Dominion.JPEG',
-    images: ['Halcyon_Being_Exhibition_A_Mothers_Dominion.JPEG', 'Halcyon_Being_Exhibition_Long_Rest_and_Jewish_Woman.JPG'],
+    image: 'Halcyon_Being_Exhibition_A_Mothers_Dominion.webp',
+    images: ['Halcyon_Being_Exhibition_A_Mothers_Dominion.webp', 'Halcyon_Being_Exhibition_Long_Rest_and_Jewish_Woman.webp'],
     ratio: 'wide',
     tag: 'Exhibition',
     title: { en: 'Halcyon Being Exhibition', zh: '寧靜存在展覽', ja: '静かな存在展覧' },
@@ -483,7 +483,7 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'Long_Rest_and_Jewish_Woman_Exhibition.jpeg',
+    image: 'Long_Rest_and_Jewish_Woman_Exhibition.webp',
     ratio: 'wide',
     tag: 'Exhibition',
     title: { en: 'Long Rest and Jewish Woman Exhibition', zh: '長憩和猶太女人與羊展覽', ja: '長い休息とユダヤの女性と羊展覧' },
@@ -491,7 +491,7 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'SHE_Exhibition.JPG',
+    image: 'SHE_Exhibition.webp',
     ratio: 'sq',
     tag: 'Exhibition',
     title: { en: 'SHE Exhibition', zh: 'SHE展覽', ja: 'SHE展覧' },

@@ -63,7 +63,7 @@ const I18N = {
   },
 };
 
-const IMAGE_BASE = 'images/';
+const IMAGE_BASE = 'images/web/';
 
 let lang         = 'en';
 let currentIndex = 0;
