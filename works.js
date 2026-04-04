@@ -210,10 +210,10 @@ const WORKS = [
   },
   {
     image: 'Spinning_Detail2.webp',
-    ratio: 'sq',
+    ratio: 'tall',
     tag: 'Fine Art',
-    title: { en: 'Hummingbird in a Plate', zh: '盤中蜂鳥', ja: '皿の中の蜂鳥' },
-    meta: 'Eastern gouache, mixed media on paper · 2025',
+    title: { en: 'Plate', zh: '盤中蜂鳥', ja: '皿の中の蜂鳥' },
+    meta: 'Eastern gouache, mixed media on paper · 2024',
     note: {
       en: '',
       zh: '',
@@ -477,8 +477,8 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'Artist_Photo_Color.webp',
-    images: ['Artist_Photo_Color.webp', 'KeYuan_.webp', 'Artist_CV_Photo.webp'],
+    image: 'Artist_Photo_BW.webp',
+    images: ['Artist_Photo_BW.webp', 'KeYuan_plate.webp', 'Artist_CV_Photo.webp'],
     ratio: 'port',
     tag: 'Artist',
     title: { en: 'Artist Photos', zh: '藝術家個人照片', ja: 'アーティスト写真' },
