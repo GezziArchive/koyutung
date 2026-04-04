@@ -474,6 +474,31 @@ nav {
   margin-bottom: 0;
 }
 
+.info-photos-section {
+  grid-template-columns: 120px 1fr;
+}
+
+.info-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.info-photos img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.info-photos img:hover { opacity: 0.8; }
+
+@media (max-width: 600px) {
+  .info-photos { grid-template-columns: repeat(2, 1fr); }
+}
+
 .cv-label {
   font-size: 9px;
   letter-spacing: 0.22em;

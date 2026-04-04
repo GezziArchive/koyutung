@@ -21,29 +21,7 @@ const I18N = {
     back:             'All Works',
     prev:             'Prev',
     next:             'Next',
-    'nav.info':       'Info',
-    'info.tagline':   'b. 1999, Taiwan',
-    'cv.edu':         'Education',
-    'cv.edu1':        'Tunghai University, BFA · Department of Fine Arts',
-    'cv.solo':        'Solo Exhibitions',
-    'cv.solo1':       'Ashen Carnival — Queen Mary Arts Space, New Taipei',
-    'cv.solo2':       'Halcyon Being — Kaisheng Art Center, Taichung',
-    'cv.solo3':       'Scales of Horizon — Fanghua Gallery, Tunghai University, Taichung',
-    'cv.group':       'Group Exhibitions',
-    'cv.group1':      '她 She — Neverland Gallery, Taipei',
-    'cv.group2':      'One Art Taipei — JR East Hotel Taipei, Taipei',
-    'cv.group3':      '密於雲夢之野 — Queen Mary Arts Space, New Taipei',
-    'cv.group4':      'Future Light: Young Taiwanese Mineral Painters — Apollo Gallery, Taipei',
-    'cv.group5':      '目光深切之裏 — Dynasty Gallery, Taipei',
-    'cv.group6':      'Taichung Art Fair — Solare Hotel, Taichung',
-    'cv.group7':      '藝術新聲 — Dadun Cultural Center, Taichung',
-    'cv.group8':      'Differentiation: Young Taiwanese Mineral Painters — Hong Genshen Museum of Art, Penghu',
-    'cv.group9':      '搖搖欲墜的乳牛其實沒那麼重要 — Dadun Cultural Center, Taichung',
-    'cv.group10':     '滬臺書畫藝術展 — Shiguang Hotel, Shanghai',
-    'cv.group11':     'Xiamen Cultural Expo — Xiamen Airport, Xiamen',
-    'cv.group12':     'Instructions of How to Be Together — Creative Studio No. 43, Tunghai University, Taichung',
-    'cv.group13':     '皆 — Dadun Cultural Center, Taichung',
-    'cv.group14':     '小軒窗 — Dadun Cultural Center, Taichung',
+    'cv.photos':      'Photos',
   },
   zh: {
     brand:            'Koyutung',
@@ -62,29 +40,7 @@ const I18N = {
     back:             '所有作品',
     prev:             '上一件',
     next:             '下一件',
-    'nav.info':       '關於',
-    'info.tagline':   '1999 年生，台灣',
-    'cv.edu':         '學歷',
-    'cv.edu1':        '東海大學美術學系，學士',
-    'cv.solo':        '個展',
-    'cv.solo1':       '沉默嘉年—廢土中生長的馬戲 — 瑪麗皇后藝術空間，新北',
-    'cv.solo2':       '寧靜存在 — 凱昇藝術中心，台中',
-    'cv.solo3':       '海與光之間的鱗片 — 東海大學芳華廳，台中',
-    'cv.group':       '聯展',
-    'cv.group1':      '她 — Neverland Gallery，台北',
-    'cv.group2':      'One Art Taipei — JR 東日本大飯店台北，台北',
-    'cv.group3':      '密於雲夢之野 — 瑪麗皇后藝術空間，新北',
-    'cv.group4':      '未來光：差異化時代的臺灣青年膠彩畫家 — 阿波羅畫廊，台北',
-    'cv.group5':      '目光深切之裏 — 朝代畫廊，台北',
-    'cv.group6':      '台中藝術博覽會 — 日月千禧酒店，台中',
-    'cv.group7':      '藝術新聲 — 大墩文化中心，台中',
-    'cv.group8':      '差異化：台灣青年世代的膠彩畫 — 洪根深美術館，澎湖',
-    'cv.group9':      '搖搖欲墜的乳牛其實沒那麼重要 — 大墩文化中心，台中',
-    'cv.group10':     '滬臺書畫藝術展 — 拾光文旅，上海',
-    'cv.group11':     '廈門文化博覽會 — 廈門機場，廈門',
-    'cv.group12':     'Instructions of How to Be Together — 東海大學 43 號創意實習中心，台中',
-    'cv.group13':     '皆 — 大墩文化中心，台中',
-    'cv.group14':     '小軒窗 — 大墩文化中心，台中',
+    'cv.photos':      '照片',
   },
   ja: {
     brand:            'Koyutung',
@@ -103,29 +59,7 @@ const I18N = {
     back:             '全作品',
     prev:             '前へ',
     next:             '次へ',
-    'nav.info':       '情報',
-    'info.tagline':   '1999年生、台湾',
-    'cv.edu':         '学歴',
-    'cv.edu1':        '東海大学美術学部、BFA',
-    'cv.solo':        '個展',
-    'cv.solo1':       '沉默嘉年—廢土中生長的馬戲 — Queen Mary Arts Space、新北',
-    'cv.solo2':       '寧靜存在 — 凱昇藝術中心、台中',
-    'cv.solo3':       '海與光之間的鱗片 — 東海大学芳華廳、台中',
-    'cv.group':       'グループ展',
-    'cv.group1':      '她 She — Neverland Gallery、台北',
-    'cv.group2':      'One Art Taipei — JR東日本ホテル台北、台北',
-    'cv.group3':      '密於雲夢之野 — Queen Mary Arts Space、新北',
-    'cv.group4':      '未來光：差異化時代の台湾若手膠彩画家 — Apollo Gallery、台北',
-    'cv.group5':      '目光深切之裏 — Dynasty Gallery、台北',
-    'cv.group6':      '台中アートフェア — Solare Hotel、台中',
-    'cv.group7':      '藝術新聲 — 大墩文化センター、台中',
-    'cv.group8':      '差異化：台湾若手膠彩画 — 洪根深美術館、澎湖',
-    'cv.group9':      '搖搖欲墜的乳牛其實沒那麼重要 — 大墩文化センター、台中',
-    'cv.group10':     '滬臺書畫藝術展 — 拾光文旅、上海',
-    'cv.group11':     '廈門文化博覧会 — 廈門空港、廈門',
-    'cv.group12':     'Instructions of How to Be Together — 東海大学43号クリエイティブスタジオ、台中',
-    'cv.group13':     '皆 — 大墩文化センター、台中',
-    'cv.group14':     '小軒窗 — 大墩文化センター、台中',
+    'cv.photos':      '写真',
   },
 };
 
@@ -188,6 +122,7 @@ function buildMasonry() {
   grid.innerHTML = '';
 
   WORKS.forEach((w, i) => {
+    if (w.tag === 'Exhibition' || w.tag === 'Artist') return;
     const item = document.createElement('div');
     item.className     = 'item';
     item.dataset.index = i;
@@ -213,9 +148,11 @@ function buildMasonry() {
     item.appendChild(overlay);
 
     item.addEventListener('mouseenter', () => {
+      overlay.style.pointerEvents = 'auto';
       gsap.to(overlay, { opacity: 1, duration: 0.2, ease: 'power1.out' });
     });
     item.addEventListener('mouseleave', () => {
+      overlay.style.pointerEvents = 'none';
       gsap.to(overlay, { opacity: 0, duration: 0.16, ease: 'power1.in' });
     });
     item.addEventListener('click', () => openWork(i));
@@ -311,7 +248,10 @@ function closeWork() {
 }
 
 function navigateWork(dir) {
-  const next = (currentIndex + dir + WORKS.length) % WORKS.length;
+  let next = (currentIndex + dir + WORKS.length) % WORKS.length;
+  while (WORKS[next].tag === 'Exhibition' || WORKS[next].tag === 'Artist') {
+    next = (next + dir + WORKS.length) % WORKS.length;
+  }
   const els  = ['#bookLeft', '#bookRight'];
   gsap.to(els, {
     opacity: 0, x: dir * -24, duration: 0.18, ease: 'power1.in',
@@ -326,52 +266,29 @@ function navigateWork(dir) {
   });
 }
 
-// ── Info page ─────────────────────────────────
-
-function openInfo() {
-  const indexPage = document.getElementById('indexPage');
-  const workPage  = document.getElementById('workPage');
-  const infoPage  = document.getElementById('infoPage');
-
-  // hide whichever page is visible
-  const fromWork = workPage.style.display !== 'none';
-  const hideEl   = fromWork ? workPage : indexPage;
-
-  // update nav active state
-  document.querySelectorAll('.nav-center li').forEach(li => li.classList.remove('active'));
-  document.querySelector('.nav-center li[data-i18n="nav.info"]').classList.add('active');
-
-  gsap.to(hideEl, {
-    opacity: 0, duration: 0.2, ease: 'power1.in',
-    onComplete: () => {
-      hideEl.style.display = 'none';
-      infoPage.style.display = 'block';
-      gsap.fromTo(infoPage, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: 'power2.out' });
-    },
-  });
-}
-
-function closeInfo() {
-  const indexPage = document.getElementById('indexPage');
-  const infoPage  = document.getElementById('infoPage');
-
-  document.querySelectorAll('.nav-center li').forEach(li => li.classList.remove('active'));
-  document.querySelector('.nav-center li[data-i18n="nav.works"]').classList.add('active');
-
-  gsap.to(infoPage, {
-    opacity: 0, duration: 0.2, ease: 'power1.in',
-    onComplete: () => {
-      infoPage.style.display = 'none';
-      indexPage.style.display = 'block';
-      gsap.fromTo(indexPage, { opacity: 0 }, { opacity: 1, duration: 0.3 });
-    },
-  });
-}
-
 // ── Init ──────────────────────────────────────
+
+function buildInfoPhotos() {
+  const container = document.getElementById('infoPhotos');
+  if (!container) return;
+  container.innerHTML = '';
+  WORKS.forEach(w => {
+    if (w.tag !== 'Exhibition' && w.tag !== 'Artist') return;
+    const imgs = w.images || [w.image];
+    imgs.forEach(filename => {
+      const img = document.createElement('img');
+      img.src = `${IMAGE_BASE}${filename}`;
+      img.alt = w.title.en;
+      img.loading = 'lazy';
+      img.onerror = () => { img.style.display = 'none'; };
+      container.appendChild(img);
+    });
+  });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   buildMasonry();
+  buildInfoPhotos();
 
   // Hero entrance animation
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -390,20 +307,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('backBtn').addEventListener('click', closeWork);
   document.getElementById('brandLink').addEventListener('click', () => {
     if (document.getElementById('workPage').style.display !== 'none') closeWork();
-    if (document.getElementById('infoPage').style.display !== 'none') closeInfo();
-  });
-
-  // Nav: Works / Info
-  const navItems = document.querySelectorAll('.nav-center li[data-i18n]');
-  navItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const key = item.dataset.i18n;
-      if (key === 'nav.works') {
-        closeInfo();
-      } else if (key === 'nav.info') {
-        openInfo();
-      }
-    });
   });
 
   // Work prev / next
