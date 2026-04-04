@@ -125,6 +125,13 @@ nav {
   gap: 6px;
 }
 
+.char-img {
+  height: 1em;
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
 .d-source {
   font-size: 10px;
   letter-spacing: 0.12em;
