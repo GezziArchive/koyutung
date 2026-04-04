@@ -21,6 +21,10 @@ const I18N = {
     back:             'All Works',
     prev:             'Prev',
     next:             'Next',
+    'info.tagline':   'b. 1999, Taiwan',
+    'cv.edu':         'Education',
+    'cv.solo':        'Solo Exhibitions',
+    'cv.group':       'Group Exhibitions',
     'cv.photos':      'Photos',
   },
   zh: {
@@ -40,6 +44,10 @@ const I18N = {
     back:             '所有作品',
     prev:             '上一件',
     next:             '下一件',
+    'info.tagline':   'b. 1999，台灣',
+    'cv.edu':         '學歷',
+    'cv.solo':        '個展',
+    'cv.group':       '聯展',
     'cv.photos':      '照片',
   },
   ja: {
@@ -59,6 +67,10 @@ const I18N = {
     back:             '全作品',
     prev:             '前へ',
     next:             '次へ',
+    'info.tagline':   'b. 1999，台湾',
+    'cv.edu':         '学歴',
+    'cv.solo':        '個展',
+    'cv.group':       'グループ展',
     'cv.photos':      '写真',
   },
 };
