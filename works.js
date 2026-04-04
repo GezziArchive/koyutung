@@ -469,7 +469,7 @@ const WORKS = [
   },
   {
     image: 'Ashen_Carnival_Exhibition.webp',
-    images: ['Ashen_Carnival_Exhibition.webp', 'Ashen_Carnival_Exhibition_per.webp'],
+    images: ['Ashen_Carnival_Exhibition.webp', 'ACmainVis.webp'],
     ratio: 'wide',
     tag: 'Exhibition',
     title: { en: 'Ashen Carnival Exhibition', zh: '沉默嘉年展覽', ja: '沈黙の嘉年華展覧' },
