@@ -362,11 +362,11 @@ const WORKS = [
     ratio: 'sq',
     tag: 'Printmaking',
     title: { en: 'Transfigured Love', zh: '變相之愛', ja: '変容する愛' },
-    meta: 'Mineral pigments, imitation gold leaf, silk gauze, ash, mixed media on paper · 2025',
+    meta: 'Mineral pigments, imitation gold leaf, silk gauze, ash, mixed media and paper on wooden board · 2025',
     note: {
-      en: 'Symptoms of disease are nothing but a disguised manifestation of the power of love; and all disease is only love transformed.',
-      zh: '一切疾病皆為變相之愛。',
-      ja: '病の症状とは愛の力の変装した顕れに他ならない。すべての病は変容した愛に過ぎない。',
+      en: '"All disease is only love transformed."\n— The Magic Mountain, Thomas Mann',
+      zh: '「一切疾病皆為變相之愛。」\n——《魔山》，托馬斯・曼',
+      ja: '「すべての病は変容した愛に過ぎない。」\n——『魔の山』、トーマス・マン',
     },
   },
   {
