@@ -209,8 +209,20 @@ const WORKS = [
     },
   },
   {
+    image: 'Spinning_Detail2.webp',
+    ratio: 'sq',
+    tag: 'Fine Art',
+    title: { en: 'Hummingbird in a Plate', zh: '盤中蜂鳥', ja: '皿の中の蜂鳥' },
+    meta: 'Eastern gouache, mixed media on paper · 2025',
+    note: {
+      en: '',
+      zh: '',
+      ja: '',
+    },
+  },
+  {
     image: 'Spinning.webp',
-    images: ['Spinning.webp', 'Spinning_Detail.webp', 'Spinning_Detail2.webp'],
+    images: ['Spinning.webp', 'Spinning_Detail.webp'],
     ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'Spinning', zh: '眩暈', ja: '眩暈' },
@@ -466,7 +478,7 @@ const WORKS = [
   },
   {
     image: 'Artist_Photo_Color.webp',
-    images: ['Artist_Photo_Color.webp', 'Artist_Photo_BW.webp', 'Artist_CV_Photo.webp'],
+    images: ['Artist_Photo_Color.webp', 'KeYuan_.webp', 'Artist_CV_Photo.webp'],
     ratio: 'port',
     tag: 'Artist',
     title: { en: 'Artist Photos', zh: '藝術家個人照片', ja: 'アーティスト写真' },
@@ -474,8 +486,8 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'Halcyon_Being_Exhibition_A_Mothers_Dominion.webp',
-    images: ['Halcyon_Being_Exhibition_A_Mothers_Dominion.webp', 'Halcyon_Being_Exhibition_Long_Rest_and_Jewish_Woman.webp'],
+    image: 'KeYuan_Circus.webp',
+    images: ['KeYuan_Circus.webp', 'Halcyon_Being_Exhibition_Long_Rest_and_Jewish_Woman.webp'],
     ratio: 'wide',
     tag: 'Exhibition',
     title: { en: 'Halcyon Being Exhibition', zh: '寧靜存在展覽', ja: '静かな存在展覧' },
@@ -483,7 +495,7 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'Long_Rest_and_Jewish_Woman_Exhibition.webp',
+    image: 'KeYuan_Landgrave.webp',
     ratio: 'wide',
     tag: 'Exhibition',
     title: { en: 'Long Rest and Jewish Woman Exhibition', zh: '長憩和猶太女人與羊展覽', ja: '長い休息とユダヤの女性と羊展覧' },
