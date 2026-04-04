@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--
+╔══════════════════════════════════════════════════════════════╗
+║                  KOYUTUNG — 網站維護說明                      ║
+╠══════════════════════════════════════════════════════════════╣
+║                                                              ║
+║  📁 資料夾結構                                                ║
+║  koyutung/                                                   ║
+║  ├── index.html      ← 你現在看的這個，主頁面結構             ║
+║  ├── style.css       ← 所有樣式，不常動                       ║
+║  ├── main.js         ← 語言切換、動畫、書頁互動邏輯           ║
+║  ├── works.js        ← ⭐ 作品資料主檔，最常在這裡編輯        ║
+║  └── images/         ← 所有圖片放這裡                        ║
+║                                                              ║
+║  🖼️  新增作品圖片步驟                                         ║
+║  1. 把圖片放進 images/ 資料夾                                 ║
+║  2. 打開 works.js                                            ║
+║  3. 找到對應作品，在 images: [...] 陣列加入檔名               ║
+║  4. 存檔，重新整理瀏覽器                                       ║
+║                                                              ║
+║  🗂️  多張圖片格式範例（在 works.js 裡）                       ║
+║  {                                                           ║
+║    image: 'Offering1.png',   ← gallery 封面縮圖              ║
+║    images: [                 ← 書頁裡的滑動圖片               ║
+║      'Offering1.png',                                        ║
+║      'Offering2.png',        ← 細節圖                        ║
+║      'Offering3.png',                                        ║
+║    ],                                                        ║
+║    ...                                                       ║
+║  }                                                           ║
+║                                                              ║
+║  📝  單張圖片（不加 images 陣列即可，不會出現切換按鈕）        ║
+║                                                              ║
+║  🌐  語言切換                                                 ║
+║  EN / 中 / 日 的翻譯文字在 main.js 的 I18N 物件裡            ║
+║  作品標題和筆記的翻譯在 works.js 每件作品的 title/note 裡     ║
+║                                                              ║
+║  📐  縮圖比例（ratio 欄位）                                   ║
+║  tall = 2:3  直式   port = 3:4  微直式                       ║
+║  sq   = 1:1  方形   wide = 4:3  橫式                         ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koyutung</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="brand" id="brandLink">Koyutung</div>
+  <ul class="nav-center">
+    <li class="active" data-i18n="nav.works">Works</li>
+    <li data-i18n="nav.info">Info</li>
+    <li><a href="https://www.gezziarchive.com/index.html" target="_blank" rel="noopener">Gezzi ↗</a></li>
+  </ul>
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中</button>
+    <button class="lang-btn" data-lang="ja">日</button>
+  </div>
+</nav>
+
+<div id="indexPage">
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-name" id="heroName">
+        <div class="decode-table">
+          <div class="decode-row">
+            <div class="d-char">戈 <span class="d-source" data-i18n="char.bone">骨質</span></div>
+            <div class="d-materials" data-i18n="mat.bone">紙本<br/>石膏</div>
+          </div>
+          <div class="decode-row">
+            <div class="d-char">羽 <span class="d-source" data-i18n="char.skin">表皮</span></div>
+            <div class="d-materials" data-i18n="mat.skin">金箔<br/>膠質</div>
+          </div>
+          <div class="decode-row">
+            <div class="d-char">彤 <span class="d-source" data-i18n="char.flesh">血肉</span></div>
+            <div class="d-materials" data-i18n="mat.flesh">礦物<br/>粉末</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-svcs" id="heroSvcs">
+        <span data-i18n="svc.commission">Commission</span> ·
+        <span data-i18n="svc.collab">Collaboration</span> ·
+        <span data-i18n="svc.exchange">Exchange</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-line" id="heroLine"></div>
+      <div class="hero-desc" data-i18n="hero.desc">
+        Between layers of mineral pigment and gold leaf —<br/>
+        exploring the female body as a system of signs.
+      </div>
+    </div>
+  </div>
+  <div class="masonry" id="masonry"></div>
+</div>
+
+<div class="work-page" id="workPage">
+  <div class="book">
+    <div class="book-left" id="bookLeft">
+      <img id="workImg" src="" alt="" />
+      <button class="img-nav-btn" id="imgPrev">&#8249;</button>
+      <button class="img-nav-btn" id="imgNext">&#8250;</button>
+      <div class="img-dots" id="imgDots"></div>
+    </div>
+    <div class="book-right" id="bookRight">
+      <div class="book-content">
+        <button class="back-btn" id="backBtn">← <span data-i18n="back">All Works</span></button>
+        <div class="work-title" id="workTitle"></div>
+        <div class="work-meta" id="workMeta"></div>
+        <div class="work-divider"></div>
+        <div class="work-note" id="workNote"></div>
+      </div>
+      <div class="work-nav">
+        <button class="work-nav-btn" id="prevBtn">← <span data-i18n="prev">Prev</span></button>
+        <span class="work-index-label" id="workIndexLabel"></span>
+        <button class="work-nav-btn" id="nextBtn"><span data-i18n="next">Next</span> →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="info-page" id="infoPage">
+  <div class="info-layout">
+
+    <!-- LEFT: bio block -->
+    <div class="info-left">
+      <div class="info-name">Ko Yu Tung<br/><span class="info-name-zh">戈羽彤</span></div>
+      <div class="info-tagline" data-i18n="info.tagline">b. 1999, Taiwan</div>
+      <div class="info-contact">
+        <a href="mailto:amusedforme@gmail.com">amusedforme@gmail.com</a><br/>
+        <a href="https://www.instagram.com/koyutung.art" target="_blank" rel="noopener">@koyutung.art ↗</a><br/>
+        <a href="https://www.koyutung.art" target="_blank" rel="noopener">koyutung.art ↗</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: CV -->
+    <div class="info-right">
+
+      <section class="cv-section">
+        <div class="cv-label" data-i18n="cv.edu">Education</div>
+        <div class="cv-entries">
+          <div class="cv-row">
+            <span class="cv-year">2020–2024</span>
+            <span class="cv-text" data-i18n="cv.edu1">Tunghai University, BFA · Department of Fine Arts</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <div class="cv-label" data-i18n="cv.solo">Solo Exhibitions</div>
+        <div class="cv-entries">
+          <div class="cv-row">
+            <span class="cv-year">2025</span>
+            <span class="cv-text" data-i18n="cv.solo1">Ashen Carnival — Queen Mary Arts Space, New Taipei</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2024</span>
+            <span class="cv-text" data-i18n="cv.solo2">Halcyon Being — Kaisheng Art Center, Taichung</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2023</span>
+            <span class="cv-text" data-i18n="cv.solo3">Scales of Horizon — Fanghua Gallery, Tunghai University, Taichung</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <div class="cv-label" data-i18n="cv.group">Group Exhibitions</div>
+        <div class="cv-entries">
+          <div class="cv-row">
+            <span class="cv-year">2026</span>
+            <span class="cv-text" data-i18n="cv.group1">她 She — Neverland Gallery, Taipei</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2026</span>
+            <span class="cv-text" data-i18n="cv.group2">One Art Taipei — JR East Hotel Taipei, Taipei</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2026</span>
+            <span class="cv-text" data-i18n="cv.group3">密於雲夢之野 — Queen Mary Arts Space, New Taipei</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2024</span>
+            <span class="cv-text" data-i18n="cv.group4">Future Light: Young Taiwanese Mineral Painters — Apollo Gallery, Taipei</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2024</span>
+            <span class="cv-text" data-i18n="cv.group5">目光深切之裏 — Dynasty Gallery, Taipei</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2024</span>
+            <span class="cv-text" data-i18n="cv.group6">Taichung Art Fair — Solare Hotel, Taichung</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2024</span>
+            <span class="cv-text" data-i18n="cv.group7">藝術新聲 — Dadun Cultural Center, Taichung</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2024</span>
+            <span class="cv-text" data-i18n="cv.group8">Differentiation: Young Taiwanese Mineral Painters — Hong Genshen Museum of Art, Penghu</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2024</span>
+            <span class="cv-text" data-i18n="cv.group9">搖搖欲墜的乳牛其實沒那麼重要 — Dadun Cultural Center, Taichung</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2024</span>
+            <span class="cv-text" data-i18n="cv.group10">滬臺書畫藝術展 — Shiguang Hotel, Shanghai</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2024</span>
+            <span class="cv-text" data-i18n="cv.group11">Xiamen Cultural Expo — Xiamen Airport, Xiamen</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2023</span>
+            <span class="cv-text" data-i18n="cv.group12">Instructions of How to Be Together — Creative Studio No. 43, Tunghai University, Taichung</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2023</span>
+            <span class="cv-text" data-i18n="cv.group13">皆 — Dadun Cultural Center, Taichung</span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2022</span>
+            <span class="cv-text" data-i18n="cv.group14">小軒窗 — Dadun Cultural Center, Taichung</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="works.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
