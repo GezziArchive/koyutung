@@ -528,8 +528,8 @@ const WORKS = [
     note: { en: '', zh: '', ja: '' },
   },
   {
-    image: 'Ashen_Carnival_Exhibition.webp',
-    images: ['Ashen_Carnival_Exhibition.webp', 'ACmainVis.webp'],
+    image: 'ACmainVis.webp',
+    images: ['ACmainVis.webp', 'Ashen_Carnival_Exhibition_per.webp'],
     ratio: 'wide',
     tag: 'Exhibition',
     title: { en: 'Ashen Carnival Exhibition', zh: '沉默嘉年展覽', ja: '沈黙の嘉年華展覧' },
