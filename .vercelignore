@@ -1,0 +1,8 @@
+# 不上傳到 Vercel 的檔案（網站只用 images/web/ 和 images/char_*.png）
+images.7z
+images/*
+!images/web/
+!images/char_*.png
+README.md
+.claude
+.env*

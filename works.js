@@ -5,7 +5,7 @@
 // ║  📌 每件作品的欄位說明                                        ║
 // ║                                                              ║
 // ║  image:  'Filename.webp'                                      ║
-// ║          gallery 封面縮圖，放在 images/ 資料夾裡              ║
+// ║          gallery 封面縮圖，放在 images/web/ 資料夾裡          ║
 // ║                                                              ║
 // ║  images: ['File1.webp', 'File2.webp', 'File3.webp']            ║
 // ║          書頁裡可左右滑動的圖片陣列                           ║
@@ -18,6 +18,8 @@
 // ║          'sq'   = 1:1   'wide' = 4:3                        ║
 // ║                                                              ║
 // ║  tag:    作品類別標籤（Fine Art / Sculpture / Printmaking）   ║
+// ║          'Exhibition' / 'Artist' → 不進作品集，只出現在     ║
+// ║          Info 頁的 Photos 區                                ║
 // ║                                                              ║
 // ║  title:  { en: '...', zh: '...', ja: '...' }                ║
 // ║          三語標題                                            ║
@@ -28,15 +30,15 @@
 // ║          三語創作筆記，可以是空字串 ''                        ║
 // ║                                                              ║
 // ║  🆕 新增作品：複製下面任一個物件，填入資料，放進陣列          ║
-// ║  🖼️  新增圖片：把檔案放進 images/ 資料夾，檔名填入欄位        ║
+// ║  🖼️  新增圖片：轉成 .webp 放進 images/web/，檔名填入欄位      ║
 // ║                                                              ║
 // ╚══════════════════════════════════════════════════════════════╝
 
 const WORKS = [
   {
     image: 'Everlasting_Rose.webp',
-    ratio: 'tall',
-    tag: 'Sculpture',
+    ratio: 'wide',
+    tag: 'Fine Art',
     title: { en: 'Everlasting Rose', zh: '永生玫瑰', ja: '永遠の薔薇' },
     meta: 'Imitation gold leaf, pastel, mineral pigments · 2024',
     note: {
@@ -56,7 +58,7 @@ const WORKS = [
   },
   {
     image: 'Stare.webp',
-    ratio: 'sq',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Stare', zh: '睽', ja: '睽' },
     meta: 'Eastern gouache, mixed media on paper · 2024',
@@ -71,23 +73,13 @@ const WORKS = [
     note: {
       en: 'Inspired by a restroom at night.\n\nSome places are always humid and dim, mirrors blurred, mingling with the scent of others. She is dressed in lace and layers — that kind of attire presupposes a reason to be seen.\n\nBut in this space, the act of looking has lost its direction. The mirror surface offers no clear position; the gaze becomes hesitant, stagnant.\n\nHer dress has made her ready to be seen, yet the space has caused looking to stall. She exists within both structures simultaneously, maintaining a distance that is not absorbed.',
       zh: '靈感來自晚上的化妝室。\n\n有些地方總是潮濕、昏暗，鏡子模糊，混著其他人的氣味。而她穿著蕾絲與層次，那類裝束預設了一個被看見的理由。\n\n但在這個空間裡，觀看失去了方向。鏡面不提供清晰的位置，視線變得遲疑、停滯。\n\n裝束使她準備好被看，空間卻讓觀看停滯。她同時處於這兩種結構之中，維持不被吸收的距離。',
-      ja: 'Inspired by a restroom at night.\n\nSome places are always humid and dim, mirrors blurred, mingling with the scent of others. She is dressed in lace and layers — that kind of attire presupposes a reason to be seen.\n\nBut in this space, the act of looking has lost its direction. The mirror surface offers no clear position; the gaze becomes hesitant, stagnant.\n\nHer dress has made her ready to be seen, yet the space has caused looking to stall. She exists within both structures simultaneously, maintaining a distance that is not absorbed.',
+      ja: '夜の化粧室から着想を得た。\n\nいつも湿っていて薄暗い場所がある。鏡はぼやけ、他人の匂いが混じり合う。彼女はレースと重ね着をまとっている。そうした装いは、見られるための理由をあらかじめ前提としている。\n\nしかしこの空間では、見るという行為が方向を失っている。鏡面ははっきりとした位置を与えず、視線はためらい、停滞する。\n\n装いは彼女を見られる準備へと整え、空間は見ることを停滞させる。彼女はその二つの構造に同時に身を置き、吸収されない距離を保っている。',
     },
   },
-  // ── 以下三件下次放 ──────────────────────────
-  // {
-  //   image: 'XXX.webp',
-  //   ratio: 'sq',
-  //   tag: 'Fine Art',
-  //   title: { en: '', zh: '', ja: '' },
-  //   meta: '',
-  //   note: { en: '', zh: '', ja: '' },
-  // },
-
   {
     image: '1995_Summer.webp',
     images: ['1995_Summer.webp', '1995_Summer_Detail.webp'],
-    ratio: 'tall',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: '1995 Summer', zh: '1995年夏', ja: '1995年の夏' },
     meta: 'Mixed media · 2025',
@@ -111,7 +103,7 @@ const WORKS = [
     },
   },
   {
-    image: 'Spinning_Detail2.webp',
+    image: 'Plate.webp',
     ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'Plate', zh: '盤中蜂鳥', ja: '皿の中の蜂鳥' },
@@ -124,7 +116,7 @@ const WORKS = [
   },
   {
     image: 'Water_Mirror.webp',
-    ratio: 'wide',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Water Mirror', zh: '水鏡', ja: '水鏡' },
     meta: 'Eastern gouache, silver leaf, mixed media on wooden board · 2025',
@@ -136,7 +128,7 @@ const WORKS = [
   },
   {
     image: 'Azure_Star_of_Bethlehem.webp',
-    ratio: 'sq',
+    ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'Azure-blue Star of Bethlehem', zh: '青藍色的伯利恆之星', ja: '青いベツレヘムの星' },
     meta: 'Eastern gouache, mixed media on paper · 2024',
@@ -145,7 +137,7 @@ const WORKS = [
   {
     image: 'The_Secluded_Corner.webp',
     images: ['The_Secluded_Corner.webp', 'The_Secluded_Corner_Detail.webp'],
-    ratio: 'port',
+    ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'The Secluded Corner', zh: '僻靜的角落', ja: '静かな片隅' },
     meta: 'Silver foil, eastern gouache, soft pastel, paper on wooden board · 2024',
@@ -160,13 +152,13 @@ const WORKS = [
     note: {
       en: 'Spring has come again — time to move from one place to another.\n\nWhen creation became inseparably bound to life, thoughts about art began to shift and drift with the subtle fluctuations of daily living. Passion occasionally fades like fallen leaves, but the love of making has never diminished.\n\nMigratory birds follow the climate; people sometimes feel the urge to move to a different environment. Perhaps the eternally verdant forest of fairy tales cannot be found in reality, but one can move between different forests.\n\nIf each time we truly feel and truly dwell, perhaps one day we will find our place among all things.',
       zh: '又到了春季，是時候從一個地方走向另一個地方。\n\n創作與生活牢牢綁定後，對藝術的想法也開始隨著生活中的細微波動起伏、偏移。熱情偶爾像落葉一樣消退，但對創作的喜愛從未變少。\n\n候鳥隨氣候遷徙，人偶爾也會有種衝動，想去不同的環境看看。也許現實裡找不到童話中萬年常綠的森林，但人可以在不同的森林之間移動。\n\n假如每次都好好感受，好好居住，也許有一天能在萬物之中找到自己的位置。',
-      ja: 'Spring has come again — time to move from one place to another.\n\nWhen creation became inseparably bound to life, thoughts about art began to shift and drift with the subtle fluctuations of daily living. Passion occasionally fades like fallen leaves, but the love of making has never diminished.\n\nMigratory birds follow the climate; people sometimes feel the urge to move to a different environment. Perhaps the eternally verdant forest of fairy tales cannot be found in reality, but one can move between different forests.\n\nIf each time we truly feel and truly dwell, perhaps one day we will find our place among all things.',
+      ja: 'また春が来た。ひとつの場所から別の場所へ移る時だ。\n\n創作と生活が固く結びついてから、芸術についての考えも、日々の細かな揺らぎにつれて浮き沈みし、ずれていくようになった。情熱はときに落ち葉のように褪せていくが、つくることへの愛が減ったことは一度もない。\n\n渡り鳥は気候に従って移動し、人もときに、違う環境を見てみたいという衝動に駆られる。童話の中の常緑の森は現実には見つからないかもしれない。けれど人は、異なる森のあいだを移り歩くことができる。\n\n毎回きちんと感じ、きちんと住まうなら、いつか万物のなかに自分の居場所を見つけられるかもしれない。',
     },
   },
   {
     image: 'Lavender_Frostfall.webp',
     images: ['Lavender_Frostfall.webp', 'Lavender_Frostfall_Detail.webp'],
-    ratio: 'sq',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Lavender Frostfall', zh: '薰衣草色的霜降', ja: 'ラベンダー色の霜降り' },
     meta: 'Eastern gouache, silver leaf, mixed media on paper · 2025',
@@ -179,8 +171,8 @@ const WORKS = [
   {
     image: 'Transfigured_Love.webp',
     images: ['Transfigured_Love.webp', 'Transfigured_Love_Process.webp'],
-    ratio: 'sq',
-    tag: 'Printmaking',
+    ratio: 'tall',
+    tag: 'Fine Art',
     title: { en: 'Transfigured Love', zh: '變相之愛', ja: '変容する愛' },
     meta: 'Mineral pigments, imitation gold leaf, silk gauze, ash, mixed media and paper on wooden board · 2025',
     note: {
@@ -190,8 +182,8 @@ const WORKS = [
     },
   },
   {
-    image: 'Packing1.webp',
-    images: ['Packing1.webp', 'Packing2.webp', 'Packing_Detail2.webp'],
+    image: 'Packing1_Copy.webp',
+    images: ['Packing1_Copy.webp', 'Packing1.webp', 'Packing2.webp', 'Packing_Detail2.webp'],
     ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'Packing', zh: '打包', ja: '荷造り' },
@@ -204,7 +196,7 @@ const WORKS = [
   },
   {
     image: 'Falling_into_a_Tumultuous_Dream.webp',
-    ratio: 'tall',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Falling into a Tumultuous Dream', zh: '墜入喧囂的夢境', ja: '喧騒の夢へと落ちる' },
     meta: 'Eastern gouache, specialty leaf, mixed media on paper · 2025',
@@ -216,8 +208,8 @@ const WORKS = [
   },
   {
     image: 'Offering1.webp',
-    images: ['Offering1.webp', 'Offering2.webp', 'Offering3.webp', 'Offering4.webp'],
-    ratio: 'tall',
+    images: ['Offering1.webp', 'Offering_Detail.webp', 'Offering3.webp', 'Offering4.webp', 'Offering_Detail2.webp', 'Offering_Exhibition.webp'],
+    ratio: 'wide',
     tag: 'Sculpture',
     title: { en: 'Offering', zh: '祈', ja: '祈り' },
     meta: 'Plaster, silver leaf, mineral pigments, matte ink, aluminum · 2025',
@@ -237,7 +229,7 @@ const WORKS = [
     note: {
       en: '"Sibilant" refers to the hissing sound produced by airflow friction — the closest thing to an incantation in the human voice.\n\nChanting is a ritual of imposing meaning upon an object. It requires neither the object\'s consent, nor its wakefulness.\n\nThese sounds fall upon her. She is neither interlocutor nor listener, but closer to a surface that is continuously being written.\n\nShe does not make sounds; she is made into sound.',
       zh: 'Sibilant 意為氣流摩擦產生的嘶嘶聲，是人聲中最接近咒語的音。\n\n吟唱是一種對著某個對象施加意義的儀式。它不需要對象的同意，也不需要對象醒著。\n\n這些聲音落在她身上。她既不是對話者，也不是聆聽者，而更接近一個被持續書寫的表面。\n\n她不發聲，她被發聲。',
-      ja: '"Sibilant" refers to the hissing sound produced by airflow friction — the closest thing to an incantation in the human voice.\n\nChanting is a ritual of imposing meaning upon an object. It requires neither the object\'s consent, nor its wakefulness.\n\nThese sounds fall upon her. She is neither interlocutor nor listener, but closer to a surface that is continuously being written.\n\nShe does not make sounds; she is made into sound.',
+      ja: 'Sibilant とは、気流の摩擦によって生じる「シー」という歯擦音のこと。人の声のなかで、もっとも呪文に近い音だ。\n\n詠唱とは、ある対象に意味を課す儀式である。そこに対象の同意は要らず、対象が目覚めている必要もない。\n\nそれらの声は彼女の上に降り注ぐ。彼女は対話者でも聴き手でもなく、むしろ絶えず書き込まれ続ける表面に近い。\n\n彼女は声を発しない。彼女は発声される。',
     },
   },
   {
@@ -250,12 +242,12 @@ const WORKS = [
     note: {
       en: 'In law, a witness uses their own presence to prove that something has happened. In religion, the Greek word martys (witness) later evolved into martyr — because witnessing sometimes comes at a cost.\n\n"She Witnesses" means: after that thing happened, she cannot exist without carrying it. The event has become part of her; it cannot be separated.\n\nThe title uses the present tense, She Witnesses, because witnessing is a continuous action that does not end.',
       zh: '在法律中，見證者用自己的在場證明某件事發生過。在宗教中，希臘文 martys（見證者）後來演變為 martyr（殉道者），因為見證有時候要付出代價。\n\n她見證意為：那件事發生之後，她無法不帶著它存在。事件成為她的一部分，無法剝離。\n\n標題使用現在式 She Witnesses，因為見證是持續的行動，不會結束。',
-      ja: 'In law, a witness uses their own presence to prove that something has happened. In religion, the Greek word martys (witness) later evolved into martyr — because witnessing sometimes comes at a cost.\n\n"She Witnesses" means: after that thing happened, she cannot exist without carrying it. The event has become part of her; it cannot be separated.\n\nThe title uses the present tense, She Witnesses, because witnessing is a continuous action that does not end.',
+      ja: '法において、証人は自らがその場にいたことによって、ある出来事が起きたことを証明する。宗教において、ギリシア語の martys（証人）はのちに martyr（殉教者）へと変わった。証言には、ときに代償が伴うからだ。\n\n「彼女は目撃する」とは、その出来事が起きたあと、彼女がそれを抱えずには存在できないということ。出来事は彼女の一部となり、切り離すことはできない。\n\nタイトルが現在形の She Witnesses であるのは、目撃が終わることのない継続的な行為だからだ。',
     },
   },
   {
     image: 'The_Garden_of_Forking_Paths.webp',
-    ratio: 'sq',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'The Garden of Forking Paths', zh: '小徑分岔的花園', ja: '岐路の庭' },
     meta: 'Eastern gouache, mixed media on paper, silk gauze · 2025',
@@ -267,8 +259,7 @@ const WORKS = [
   },
   {
     image: 'Birdbath.webp',
-    images: ['Birdbath.webp', 'Birdbath.webp'],
-    ratio: 'sq',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Birdbath', zh: '鳥浴池', ja: '水浴び場' },
     meta: 'Eastern gouache, silver leaf, mixed media on paper · 2025',
@@ -281,7 +272,7 @@ const WORKS = [
   {
     image: 'Obsidian_Gleam.webp',
     images: ['Obsidian_Gleam.webp', 'Obsidian_Gleam_Detail.webp', 'Obsidian_Gleam_Detail1.webp'],
-    ratio: 'sq',
+    ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'Obsidian Gleam', zh: '曜', ja: '曜' },
     meta: 'Eastern gouache, silver leaf, mixed media on paper · 2025',
@@ -305,7 +296,7 @@ const WORKS = [
   },
   {
     image: 'White_Horse_on_the_Snowfield.webp',
-    ratio: 'wide',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'White Horse on the Snowfield', zh: '白馬與雪原', ja: '雪原の白馬' },
     meta: 'Eastern gouache, mixed media on paper · 2025',
@@ -326,7 +317,8 @@ const WORKS = [
   },
   {
     image: 'Violet.webp',
-    ratio: 'wide',
+    images: ['Violet.webp', 'Violet_Detail.webp'],
+    ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'Violet', zh: '紫羅蘭', ja: '菫' },
     meta: 'Eastern gouache, silver leaf, mixed media on wooden board · 2025',
@@ -338,7 +330,7 @@ const WORKS = [
   },
   {
     image: 'Ferns_Growing_Between_Bricks.webp',
-    ratio: 'wide',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Ferns Growing Between Bricks', zh: '磚縫中生長的蕨', ja: '煉瓦の隙間に育つシダ' },
     meta: 'Eastern gouache, specialty leaf, mixed media on paper · 2025',
@@ -351,7 +343,7 @@ const WORKS = [
   {
     image: 'D_Major.webp',
     images: ['D_Major.webp', 'D_Major_Detail.webp', 'D_Major_Detail2.webp'],
-    ratio: 'sq',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'D Major', zh: 'D大調', ja: 'ニ長調' },
     meta: 'Eastern gouache, silver leaf, mixed media on wooden board · 2025',
@@ -364,7 +356,7 @@ const WORKS = [
   {
     image: 'Jewish_Woman_and_Sheep.webp',
     images: ['Jewish_Woman_and_Sheep.webp', 'Jewish_Woman_and_Sheep_Detail.webp'],
-    ratio: 'sq',
+    ratio: 'tall',
     tag: 'Fine Art',
     title: { en: 'Jewish Woman and Sheep', zh: '猶太女人與羊', ja: 'ユダヤの女性と羊' },
     meta: 'Mixed media · 2025',
@@ -380,7 +372,7 @@ const WORKS = [
     note: {
       en: 'In legal and political contexts, "declare" belongs to performative language — it means the act is completed the moment it is spoken.\n\nA person actively announces responsibility for a principle, truth, or rule; the target of the action is the symbolic order, not any specific individual.\n\n"I solemnly swear I mean no good" and pledging allegiance share a similar structure, both constituting a definition of one\'s own position. In this sense, declaration is understood as a form of self-binding.\n\n"I declare… my limits, and I will never become a perpetrator."',
       zh: '在法律與政治語境裡，declare 屬於施為語言，代表說出來的當下行為即完成。\n\n一人主動宣告自己對某個原則、真實、或規則負責，動作的對象是象徵性的秩序，而非具體的人。\n\n我鄭重宣誓我不懷好意和我宣示效忠，兩者有相似的結構，且同樣是對自身位置的界定。在這個意義上，宣示被視為一種自我約束。\n\n「我宣示⋯我的界線，而我永遠不會成為加害者。」',
-      ja: 'In legal and political contexts, "declare" belongs to performative language — it means the act is completed the moment it is spoken.\n\nA person actively announces responsibility for a principle, truth, or rule; the target of the action is the symbolic order, not any specific individual.\n\n"I solemnly swear I mean no good" and pledging allegiance share a similar structure, both constituting a definition of one\'s own position. In this sense, declaration is understood as a form of self-binding.\n\n"I declare… my limits, and I will never become a perpetrator."',
+      ja: '法や政治の文脈において、declare は行為遂行的な言語に属する。口にしたその瞬間に、行為が完了するということだ。\n\nある人が、ある原則や真実、規則に対して自ら責任を負うことを表明する。その行為が向かう先は具体的な誰かではなく、象徴的な秩序である。\n\n「われ、よからぬことをたくらむ者なり」という誓いと忠誠の宣誓は似た構造をもち、どちらも自らの立ち位置を定めるものだ。この意味で、宣言は一種の自己拘束とみなされる。\n\n「私は宣言する……私の境界を。そして私は決して加害者にはならない。」',
     },
   },
   {
@@ -403,7 +395,7 @@ const WORKS = [
   {
     image: 'Long_Rest.webp',
     images: ['Long_Rest.webp', 'Long_Rest_1.webp', 'Long_Rest_2.webp'],
-    ratio: 'sq',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Long Rest', zh: '長憩', ja: '長い休息' },
     meta: 'Mixed media · 2025',
@@ -412,7 +404,7 @@ const WORKS = [
   {
     image: 'The_Guardian_Under_the_Bed.webp',
     images: ['The_Guardian_Under_the_Bed.webp', 'The_Guardian_Under_the_Bed_Detail.webp'],
-    ratio: 'tall',
+    ratio: 'sq',
     tag: 'Fine Art',
     title: { en: 'The Guardian Under the Bed', zh: '床底的守護者', ja: 'ベッドの下の守護者' },
     meta: 'Eastern gouache, silver leaf, mixed media on wooden board · 2025',
@@ -424,8 +416,7 @@ const WORKS = [
   },
   {
     image: 'Spinning.webp',
-    images: ['Spinning.webp', 'Spinning_Detail.webp'],
-    ratio: 'sq',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Spinning', zh: '眩暈', ja: '眩暈' },
     meta: 'Eastern gouache, mixed media on paper, silk gauze · 2025',
@@ -437,7 +428,7 @@ const WORKS = [
   },
   {
     image: 'Madame_Butterfly.webp',
-    ratio: 'tall',
+    ratio: 'wide',
     tag: 'Fine Art',
     title: { en: 'Madame Butterfly', zh: '蝴蝶夫人', ja: '蝶々夫人' },
     meta: 'Eastern gouache, mixed media on paper · 2022',
@@ -457,7 +448,7 @@ const WORKS = [
   },
   {
     image: 'Carousel_and_the_North_Star.webp',
-    ratio: 'sq',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Carousel and the North Star', zh: '木馬與北極星', ja: '回転木馬と北極星' },
     meta: 'Eastern gouache, mixed media on paper · 2025',
@@ -495,7 +486,7 @@ const WORKS = [
   {
     image: 'Veil.webp',
     images: ['Veil.webp', 'Veil_Detail.webp'],
-    ratio: 'wide',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Veil', zh: '面紗', ja: 'ヴェール' },
     meta: 'Eastern gouache, silver leaf, mixed media on paper · 2025',
@@ -515,13 +506,13 @@ const WORKS = [
     note: {
       en: 'Coral does not move actively, but it does not stop either. Layer by layer, it turns time into shape through the accumulation of calcium carbonate.\n\nCalcium carbonate is also a material I frequently use in my work, to shape surfaces with a sense of sedimentation and weathering.\n\nCoral looks like stone, but it is alive. Beneath a hard surface is a continuously growing organism — living and dead structures layered together, the present built upon layers already deceased.\n\nLike the women in my memory — resilient yet seemingly fragile, beautiful yet bearing scars beneath.',
       zh: '一般來說，成體珊瑚不主動移動，但也不停止。透過堆積碳酸鈣，一層一層把時間變成形狀。\n\n碳酸鈣也是我創作中常用的材料，用來塑造沉積感與風化感的表面紋理。\n\n珊瑚看起來像石頭，但卻是活的。堅硬的表面下是持續生長的有機體，活體與死去的結構疊在一起，現在的存在建立在過去已經死亡的層之上。\n\n如同我印象裡的女人們，堅韌卻看似易碎，美麗底下帶有傷痕。',
-      ja: 'Coral does not move actively, but it does not stop either. Layer by layer, it turns time into shape through the accumulation of calcium carbonate.\n\nCalcium carbonate is also a material I frequently use in my work, to shape surfaces with a sense of sedimentation and weathering.\n\nCoral looks like stone, but it is alive. Beneath a hard surface is a continuously growing organism — living and dead structures layered together, the present built upon layers already deceased.\n\nLike the women in my memory — resilient yet seemingly fragile, beautiful yet bearing scars beneath.',
+      ja: '成体の珊瑚はふつう自ら動くことはないが、止まることもない。炭酸カルシウムを積み重ね、一層ずつ時間をかたちに変えていく。\n\n炭酸カルシウムは、私が制作でよく使う素材でもある。堆積や風化を感じさせる表面をつくるために使っている。\n\n珊瑚は石のように見えるが、生きている。硬い表面の下には成長し続ける有機体があり、生きた構造と死んだ構造が重なり合い、今の存在はすでに死んだ層の上に築かれている。\n\n私の記憶のなかの女性たちのように。しなやかで強いのに壊れやすく見え、美しさの下に傷を抱えている。',
     },
   },
   {
     image: 'Woman_and_White_Horse.webp',
     images: ['Woman_and_White_Horse.webp', 'Woman_and_White_Horse_Detail.webp', 'Woman_and_White_Horse_2.webp'],
-    ratio: 'sq',
+    ratio: 'port',
     tag: 'Fine Art',
     title: { en: 'Woman and White Horse', zh: '女人與白馬', ja: '女性と白馬' },
     meta: 'Mixed media · 2025',

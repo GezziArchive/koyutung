@@ -448,6 +448,7 @@ nav {
 
 .info-tagline {
   font-size: 10px;
+  line-height: 2;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink3);
@@ -497,11 +498,7 @@ nav {
   aspect-ratio: 1;
   object-fit: cover;
   display: block;
-  cursor: pointer;
-  transition: opacity 0.2s;
 }
-
-.info-photos img:hover { opacity: 0.8; }
 
 @media (max-width: 600px) {
   .info-photos { grid-template-columns: repeat(2, 1fr); }
@@ -544,6 +541,8 @@ nav {
   line-height: 1.65;
   color: var(--ink2);
 }
+.cv-text a { border-bottom: 1px solid var(--border); transition: color 0.15s, border-color 0.15s; }
+.cv-text a:hover { color: var(--ink); border-color: var(--ink3); }
 
 /* ── FOOTER ── */
 .site-footer {

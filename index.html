@@ -10,21 +10,21 @@
 ║  ├── style.css       ← 所有樣式，不常動                       ║
 ║  ├── main.js         ← 語言切換、動畫、書頁互動邏輯           ║
 ║  ├── works.js        ← ⭐ 作品資料主檔，最常在這裡編輯        ║
-║  └── images/         ← 所有圖片放這裡                        ║
+║  └── images/web/     ← 網站實際使用的圖片（.webp）           ║
 ║                                                              ║
 ║  🖼️  新增作品圖片步驟                                         ║
-║  1. 把圖片放進 images/ 資料夾                                 ║
+║  1. 把圖片轉成 .webp，放進 images/web/ 資料夾                 ║
 ║  2. 打開 works.js                                            ║
 ║  3. 找到對應作品，在 images: [...] 陣列加入檔名               ║
 ║  4. 存檔，重新整理瀏覽器                                       ║
 ║                                                              ║
 ║  🗂️  多張圖片格式範例（在 works.js 裡）                       ║
 ║  {                                                           ║
-║    image: 'Offering1.png',   ← gallery 封面縮圖              ║
+║    image: 'Offering1.webp',  ← gallery 封面縮圖              ║
 ║    images: [                 ← 書頁裡的滑動圖片               ║
-║      'Offering1.png',                                        ║
-║      'Offering2.png',        ← 細節圖                        ║
-║      'Offering3.png',                                        ║
+║      'Offering1.webp',                                       ║
+║      'Offering2.webp',       ← 細節圖                        ║
+║      'Offering3.webp',                                       ║
 ║    ],                                                        ║
 ║    ...                                                       ║
 ║  }                                                           ║
@@ -45,7 +45,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Koyutung</title>
+  <title>Ko Yu Tung 戈羽彤 · Koyutung</title>
+  <meta name="description" content="Ko Yu Tung (戈羽彤), Taiwanese visual artist working with mineral pigments, metal leaf and gesso on paper mounted on wooden board." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ko Yu Tung 戈羽彤" />
+  <meta property="og:description" content="Mineral pigments, metal leaf and gesso on paper mounted on wooden board." />
+  <meta property="og:url" content="https://www.koyutung.art/" />
+  <meta property="og:image" content="https://www.koyutung.art/images/web/She_is_Coral.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="images/char_ge.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -131,9 +139,9 @@
     <!-- LEFT: bio block -->
     <div class="info-left">
       <div class="info-name" data-i18n="info.name">Ko Yu Tung<br/><span class="info-name-zh">戈羽彤</span></div>
-      <div class="info-tagline" data-i18n="info.tagline">b. 1999, Taiwan</div>
+      <div class="info-tagline" data-i18n="info.tagline">b. 1999, Kaohsiung<br/>Taipei · Paris</div>
       <div class="info-contact">
-        <a href="mailto:amusedforme@gmail.com">amusedforme@gmail.com</a><br/>
+        <a href="mailto:koyutung.art@gmail.com">koyutung.art@gmail.com</a><br/>
         <a href="https://www.instagram.com/koyutung.art" target="_blank" rel="noopener">@koyutung.art ↗</a><br/>
         <a href="https://www.koyutung.art" target="_blank" rel="noopener">koyutung.art ↗</a>
       </div>
@@ -178,6 +186,10 @@
       <section class="cv-section">
         <div class="cv-label" data-i18n="cv.group">Group Exhibitions</div>
         <div class="cv-entries">
+          <div class="cv-row">
+            <span class="cv-year">2026</span>
+            <span class="cv-text" data-i18n="cv.group0">Mind the Gap · The Crypt Gallery, London</span>
+          </div>
           <div class="cv-row">
             <span class="cv-year">2026</span>
             <span class="cv-text" data-i18n="cv.group1">She · Neverland Gallery, Taipei</span>
@@ -241,12 +253,26 @@
         </div>
       </section>
 
+      <section class="cv-section">
+        <div class="cv-label" data-i18n="cv.press">Press</div>
+        <div class="cv-entries">
+          <div class="cv-row">
+            <span class="cv-year">2026</span>
+            <span class="cv-text"><a href="https://www.instagram.com/p/DcA6RuWjViH/" target="_blank" rel="noopener">Coup de cœur · ASAKAN ↗</a></span>
+          </div>
+          <div class="cv-row">
+            <span class="cv-year">2026</span>
+            <span class="cv-text"><a href="https://asianartcontemporary.com/2026/07/11/interview-paris-based-artist-ko-yu-tung/" target="_blank" rel="noopener">Interview | Taipei-Based Artist Ko Yu Tung · Asian Art Contemporary ↗</a></span>
+          </div>
+        </div>
+      </section>
+
     </div>
   </div>
 </div>
 
 <footer class="site-footer">
-  <span>© 2025 Ko Yu Tung 戈羽彤</span>
+  <span>© 2026 Ko Yu Tung 戈羽彤</span>
   <span class="footer-note">Translations are AI-assisted and may contain inaccuracies. · 翻譯由 AI 輔助，可能存在誤差。· 翻訳はAI補助によるものであり、誤りが含まれる場合があります。</span>
 </footer>
 
