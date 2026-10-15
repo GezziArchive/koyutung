@@ -36,7 +36,7 @@ const I18N = {
     'cv.group3':      'The Realm of Dreaming Clouds · Queen Marie Arts Space, New Taipei',
     'cv.group4':      'Future Light: Young Taiwanese Mineral Painters in an Age of Differentiation · Apollo Gallery, Taipei',
     'cv.group5':      'Within the Intense Gaze · Dynasty Gallery, Taipei',
-    'cv.group16':     'Youth Ridge · Ke Yuan Gallery, Taichung',
+    'cv.group16':     'The Ridge of Youth · Ke Yuan Gallery, Taichung',
     'cv.group6':      'Taichung Art Fair · Solare Hotel, Taichung',
     'cv.group7':      'New Voices in Art · Dadun Cultural Center, Taichung',
     'cv.group8':      'Please Support: Tunghai Fine Arts BFA Class of 2024 Graduation Exhibition · Tunqu Arts Center, Taichung',
