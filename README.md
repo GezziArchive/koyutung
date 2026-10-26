@@ -29,9 +29,9 @@ koyutung/
   images: ['Title.webp', 'Title_Detail.webp'],  // 作品頁可滑動的圖（單張就整行刪掉）
   ratio: 'sq',                                  // tall 2:3 · port 3:4 · sq 1:1 · wide 4:3
   tag: 'Fine Art',                              // Fine Art / Sculpture / Printmaking
-  title: { en: '', zh: '', ja: '' },
+  title: { en: '', zh: '', fr: '' },
   meta: '媒材 · 年份',                            // 只有一種語言
-  note: { en: '', zh: '', ja: '' },             // 可以留空 ''
+  note: { en: '', zh: '', fr: '' },             // 可以留空 ''
 },
 ```
 
@@ -41,8 +41,13 @@ koyutung/
 
 要改兩個地方：
 1. `index.html` 的 Info 區加一個 `cv-row`，`data-i18n` 給一個新的 key
-2. `main.js` 的 `I18N` 裡，`en` / `zh` / `ja` 三個語言都加上同一個 key
+2. `main.js` 的 `I18N` 裡，`en` / `zh` / `fr` 三個語言都加上同一個 key
 
 ## Gezzi 外連
 
-`index.html` 導覽列的 `Gezzi ↗` 連到 `https://www.gezziarchive.com/`。
+`index.html` 導覽列的 `Coulisses ↗` 連到 `https://www.gezziarchive.com/`。
+
+## 素描紙／影子（淺色／深色模式）
+
+- 顏色在 `style.css` 最上面：`:root` 是素描紙（#e2e6e6），`[data-theme="dark"]` 和 `prefers-color-scheme: dark` 那兩段是影子（#161f27），兩段要一起改
+- 訪客沒按過按鈕時跟隨手機／電腦的系統設定；按過之後會記住選擇

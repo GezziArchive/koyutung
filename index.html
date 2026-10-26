@@ -32,7 +32,7 @@
 ║  📝  單張圖片（不加 images 陣列即可，不會出現切換按鈕）        ║
 ║                                                              ║
 ║  🌐  語言切換                                                 ║
-║  EN / 中 / 日 的翻譯文字在 main.js 的 I18N 物件裡            ║
+║  EN / 中 / FR 的翻譯文字在 main.js 的 I18N 物件裡            ║
 ║  作品標題和筆記的翻譯在 works.js 每件作品的 title/note 裡     ║
 ║                                                              ║
 ║  📐  縮圖比例（ratio 欄位）                                   ║
@@ -54,6 +54,10 @@
   <meta property="og:image" content="https://www.koyutung.art/images/web/She_is_Coral.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="images/char_ge.png" />
+  <script>
+    // 開頁前先套用記住的模式，避免畫面閃一下
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -63,12 +67,18 @@
   <ul class="nav-center">
     <li class="active" data-i18n="nav.works">Works</li>
     <li data-i18n="nav.info">Info</li>
-    <li><a href="https://www.gezziarchive.com/index.html" target="_blank" rel="noopener">Gezzi ↗</a></li>
+    <li><a href="https://www.gezziarchive.com/index.html" target="_blank" rel="noopener">Coulisses ↗</a></li>
   </ul>
-  <div class="lang-switcher">
-    <button class="lang-btn active" data-lang="en">EN</button>
-    <button class="lang-btn" data-lang="zh">中</button>
-    <button class="lang-btn" data-lang="ja">日</button>
+  <div class="nav-right">
+    <div class="theme-switcher">
+      <button class="theme-btn" data-theme-choice="light" data-i18n="theme.light">Sketch paper</button>
+      <button class="theme-btn" data-theme-choice="dark" data-i18n="theme.dark">Shadow</button>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="zh">中</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+    </div>
   </div>
 </nav>
 
@@ -285,7 +295,6 @@
 
 <footer class="site-footer">
   <span>© 2026 Ko Yu Tung 戈羽彤</span>
-  <span class="footer-note">Translations are AI-assisted and may contain inaccuracies. · 翻譯由 AI 輔助，可能存在誤差。· 翻訳はAI補助によるものであり、誤りが含まれる場合があります。</span>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

@@ -18,6 +18,8 @@ const I18N = {
     'svc.commission': 'Commission',
     'svc.collab':     'Collaboration',
     'svc.exchange':   'Exchange',
+    'theme.light':    'Sketch paper',
+    'theme.dark':     'Shadow',
     back:             'All Works',
     prev:             'Prev',
     next:             'Next',
@@ -64,6 +66,8 @@ const I18N = {
     'svc.commission': '訂製委託',
     'svc.collab':     '合作交流',
     'svc.exchange':   '作品交換',
+    'theme.light':    '素描紙',
+    'theme.dark':     '影子',
     back:             '所有作品',
     prev:             '上一件',
     next:             '下一件',
@@ -96,51 +100,53 @@ const I18N = {
     'cv.photos':      '照片',
     'cv.press':       '媒體報導',
   },
-  ja: {
+  fr: {
     brand:            'Koyutung',
-    'char.bone':      '骨格',
-    'char.skin':      '表皮',
-    'char.flesh':     '血肉',
-    'mat.bone':       '紙本<br/>石膏',
-    'mat.skin':       '金箔<br/>膠質',
-    'mat.flesh':      '鉱物<br/>粉末',
-    'nav.works':      '作品',
-    'nav.info':       '情報',
-    'hero.desc':      '鉱物性顔料と金箔の層の間で——<br/>記号体系としての女性の身体を探る。',
-    'svc.commission': '委託制作',
-    'svc.collab':     'コラボレーション',
-    'svc.exchange':   '作品交換',
-    back:             '全作品',
-    prev:             '前へ',
-    next:             '次へ',
-    'info.name':      'コ・ユートン<br/><span class="info-name-zh">戈羽彤</span>',
-    'info.tagline':   '1999年高雄生まれ<br/>台北 · パリ',
-    'cv.edu':         '学歴',
-    'cv.edu1':        '東海大学美術学部 学士',
-    'cv.solo':        '個展',
-    'cv.solo1':       '廃土の中に育つサーカス · クイーンメアリーアートスペース、新北',
-    'cv.solo2':       '静けさの存在 · 凱昇アートセンター、台中',
-    'cv.solo3':       '海と光の間の鱗 · 東海大学芳華廳、台中',
-    'cv.group':       'グループ展',
-    'cv.group0':      'Mind the Gap · ザ・クリプト・ギャラリー、ロンドン',
-    'cv.group1':      '彼女 · ネバーランドギャラリー、台北',
-    'cv.group2':      'One Art Taipei · JR東日本ホテル台北、台北',
-    'cv.group3':      '雲夢の野に密に · クイーンメアリーアートスペース、新北',
-    'cv.group4':      '未来光：差異化時代の台湾若手膠彩画家 · アポロギャラリー、台北',
-    'cv.group5':      '眼差しの深みの裏に · 朝代ギャラリー、台北',
-    'cv.group16':     '青春嶺 · 科元ギャラリー、台中',
-    'cv.group6':      '台中アートフェア · ソラーレホテル、台中',
-    'cv.group7':      '芸術の新声 · 大墩文化センター、台中',
-    'cv.group8':      'サポートを：東海美術系第109期学士卒業展 · 屯区芸文センター、台中',
-    'cv.group9':      '差異化：台湾若手世代の膠彩画 · 洪根深美術館、澎湖',
-    'cv.group10':     'ぐらつく乳牛は実はそれほど重要でない · 大墩文化センター、台中',
-    'cv.group11':     '滬台書画芸術展 · 拾光文旅、上海',
-    'cv.group12':     '廈門文化博覧会 · 廈門空港、廈門',
-    'cv.group13':     'Instructions of How to Be Together · 東海大学43号クリエイティブスタジオ、台中',
-    'cv.group14':     'すべて · 大墩文化センター、台中',
-    'cv.group15':     '小さな窓 · 大墩文化センター、台中',
-    'cv.photos':      '写真',
-    'cv.press':       '掲載',
+    'char.bone':      'os',
+    'char.skin':      'peau',
+    'char.flesh':     'chair',
+    'mat.bone':       'papier<br/>plâtre',
+    'mat.skin':       'feuille d’or<br/>colle',
+    'mat.flesh':      'poudre<br/>minérale',
+    'nav.works':      'Œuvres',
+    'nav.info':       'Infos',
+    'hero.desc':      'Entre les couches de pigments minéraux et de feuille d’or,<br/>le corps féminin exploré comme un système de signes.',
+    'svc.commission': 'Commande',
+    'svc.collab':     'Collaboration',
+    'svc.exchange':   'Échange',
+    'theme.light':    'Papier',
+    'theme.dark':     'Ombre',
+    back:             'Toutes les œuvres',
+    prev:             'Précédente',
+    next:             'Suivante',
+    'info.name':      'Ko Yu Tung<br/><span class="info-name-zh">戈羽彤</span>',
+    'info.tagline':   'Née en 1999 à Kaohsiung<br/>Taipei · Paris',
+    'cv.edu':         'Formation',
+    'cv.edu1':        'Université Tunghai, licence de beaux-arts (BFA), département des beaux-arts',
+    'cv.solo':        'Expositions personnelles',
+    'cv.solo1':       'Ashen Carnival, Circus Growing in the Wasteland · Queen Marie Arts Space, Nouveau Taipei',
+    'cv.solo2':       'Halcyon Being · Centre d’art Kaisheng, Taichung',
+    'cv.solo3':       'Scales of Horizon · Galerie Fanghua, Université Tunghai, Taichung',
+    'cv.group':       'Expositions collectives',
+    'cv.group0':      'Mind the Gap · The Crypt Gallery, Londres',
+    'cv.group1':      'She · Neverland Gallery, Taipei',
+    'cv.group2':      'One Art Taipei · Hôtel JR East Taipei, Taipei',
+    'cv.group3':      'The Realm of Dreaming Clouds · Queen Marie Arts Space, Nouveau Taipei',
+    'cv.group4':      'Future Light: Young Taiwanese Mineral Painters in an Age of Differentiation · Galerie Apollo, Taipei',
+    'cv.group5':      'Within the Intense Gaze · Galerie Dynasty, Taipei',
+    'cv.group16':     'The Ridge of Youth · Ke Yuan Gallery, Taichung',
+    'cv.group6':      'Salon d’art de Taichung · Hôtel Solare, Taichung',
+    'cv.group7':      'New Voices in Art · Centre culturel de Dadun, Taichung',
+    'cv.group8':      'Please Support, exposition de fin d’études de la promotion 2024 du département des beaux-arts de Tunghai · Centre des arts de Tunqu, Taichung',
+    'cv.group9':      'Differentiation: Mineral Painting by Young Taiwanese Artists · Musée d’art Hong Genshen, Penghu',
+    'cv.group10':     'The Tottering Cow Is Not That Important After All · Centre culturel de Dadun, Taichung',
+    'cv.group11':     'Exposition de calligraphie et de peinture Shanghai-Taïwan · Hôtel Shiguang, Shanghai',
+    'cv.group12':     'Salon culturel de Xiamen · Aéroport de Xiamen, Xiamen',
+    'cv.group13':     'Instructions of How to Be Together · Studio de création n° 43, Université Tunghai, Taichung',
+    'cv.group14':     'All · Centre culturel de Dadun, Taichung',
+    'cv.group15':     'Small Window · Centre culturel de Dadun, Taichung',
+    'cv.photos':      'Photos',
+    'cv.press':       'Presse',
   },
 };
 
@@ -156,7 +162,7 @@ const isGalleryWork = w => w.tag !== 'Exhibition' && w.tag !== 'Artist';
 
 function applyLang(l, animate) {
   lang = l;
-  document.documentElement.lang = { en: 'en', zh: 'zh-Hant', ja: 'ja' }[l];
+  document.documentElement.lang = { en: 'en', zh: 'zh-Hant', fr: 'fr' }[l];
 
   const targets = Array.from(document.querySelectorAll('[data-i18n]'));
 
@@ -349,6 +355,28 @@ function navigateWork(dir) {
   });
 }
 
+// ── Theme：素描紙 / 影子 ───────────────────────
+// 沒有手動選過時跟隨系統設定；按過按鈕就記住選擇
+
+const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+function currentTheme() {
+  return document.documentElement.dataset.theme || (darkQuery.matches ? 'dark' : 'light');
+}
+
+function syncThemeButtons() {
+  const t = currentTheme();
+  document.querySelectorAll('.theme-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.themeChoice === t);
+  });
+}
+
+function setTheme(t) {
+  document.documentElement.dataset.theme = t;
+  try { localStorage.setItem('theme', t); } catch (e) {}
+  syncThemeButtons();
+}
+
 // ── Init ──────────────────────────────────────
 
 function buildInfoPhotos() {
@@ -427,6 +455,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('imgNext').addEventListener('click', () => goToImage(imageIndex + 1, WORKS[currentIndex]));
   document.getElementById('prevBtn').addEventListener('click', () => navigateWork(-1));
   document.getElementById('nextBtn').addEventListener('click', () => navigateWork(1));
+
+  // Theme switcher
+  syncThemeButtons();
+  darkQuery.addEventListener('change', syncThemeButtons);
+  document.querySelectorAll('.theme-btn').forEach(btn => {
+    btn.addEventListener('click', () => setTheme(btn.dataset.themeChoice));
+  });
 
   // Language switcher
   document.querySelectorAll('.lang-btn').forEach(btn => {

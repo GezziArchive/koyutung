@@ -2,15 +2,52 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* 素描紙（淺色）*/
 :root {
-  --bg: #f4f1ec;
-  --ink: #18150f;
-  --ink2: #6a6058;
-  --ink3: #9c9188;
-  --border: rgba(24, 21, 15, 0.13);
+  --bg: #e2e6e6;
+  --ink: #1a1f22;
+  --ink2: #4c5559;
+  --ink3: #7a8386;
+  --border: rgba(26, 31, 34, 0.14);
+  --surface: rgba(0, 0, 0, 0.05);
+  --overlay: rgba(226, 230, 230, 0.94);
+  --btn-bg: rgba(226, 230, 230, 0.85);
+  --char-filter: none;
+  --char-blend: multiply;
+}
+
+/* 影子（深色）：手動切換 */
+:root[data-theme="dark"] {
+  --bg: #161f27;
+  --ink: #e2e6e6;
+  --ink2: #aab3b8;
+  --ink3: #7c868c;
+  --border: rgba(226, 230, 230, 0.14);
+  --surface: rgba(255, 255, 255, 0.05);
+  --overlay: rgba(22, 31, 39, 0.92);
+  --btn-bg: rgba(22, 31, 39, 0.75);
+  --char-filter: invert(1);
+  --char-blend: screen;
+}
+
+/* 影子（深色）：沒手動選過時，跟隨系統設定 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --bg: #161f27;
+  --ink: #e2e6e6;
+  --ink2: #aab3b8;
+  --ink3: #7c868c;
+  --border: rgba(226, 230, 230, 0.14);
+  --surface: rgba(255, 255, 255, 0.05);
+  --overlay: rgba(22, 31, 39, 0.92);
+  --btn-bg: rgba(22, 31, 39, 0.75);
+  --char-filter: invert(1);
+  --char-blend: screen;
+  }
 }
 
 html, body {
+  transition: background 0.3s, color 0.3s;
   background: var(--bg);
   color: var(--ink);
   font-family: 'EB Garamond', Georgia, serif;
@@ -65,7 +102,26 @@ nav {
 .nav-center li:hover,
 .nav-center li.active { color: var(--ink); }
 
-.lang-switcher { display: flex; }
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.lang-switcher, .theme-switcher { display: flex; }
+.theme-btn {
+  padding: 3px 10px;
+  font-family: 'EB Garamond', serif;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--ink3);
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  margin-left: -1px;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.theme-btn:first-child { clip-path: polygon(4px 0%, 100% 0%, 100% 100%, 0% 100%); }
+.theme-btn:last-child  { clip-path: polygon(0% 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%); }
+/* 按下去：填當下的背景色，蓋住相鄰按鈕重疊的框線 */
+.theme-btn.active { background: var(--bg); color: var(--ink); border-color: var(--ink); z-index: 1; }
+.theme-btn:hover:not(.active) { color: var(--ink); }
 .lang-btn {
   padding: 3px 10px;
   font-family: 'EB Garamond', serif;
@@ -129,7 +185,8 @@ nav {
   height: 1em;
   width: auto;
   display: block;
-  mix-blend-mode: multiply;
+  mix-blend-mode: var(--char-blend);
+  filter: var(--char-filter);
 }
 
 .d-source {
@@ -202,7 +259,7 @@ nav {
 .item-img {
   width: 100%;
   display: block;
-  background: #d0c8be;
+  background: var(--surface);
   position: relative;
 }
 .item-img.tall  { aspect-ratio: 2 / 3; }
@@ -221,7 +278,7 @@ nav {
 .item-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(244, 241, 236, 0.94);
+  background: var(--overlay);
   opacity: 0;
   display: flex;
   flex-direction: column;
@@ -264,7 +321,7 @@ nav {
 .book-left {
   border-right: 1px solid var(--border);
   overflow: hidden;
-  background: #e8e3db;
+  background: var(--surface);
 }
 
 .book-left img {
@@ -373,7 +430,7 @@ nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(244, 241, 236, 0.85);
+  background: var(--btn-bg);
   border: 1px solid var(--border);
   color: var(--ink2);
   font-size: 22px;
@@ -601,5 +658,5 @@ nav {
   }
   .nav-center::-webkit-scrollbar { display: none; }
   .nav-center li { padding: 0 14px; white-space: nowrap; }
-  .lang-switcher { order: 2; }
+  .nav-right { order: 2; gap: 8px; }
 }
