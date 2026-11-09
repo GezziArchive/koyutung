@@ -528,8 +528,9 @@ const WORKS = [
     note: { en: '', zh: '', fr: '' },
   },
   {
-    image: 'Artist_Photo_BW.webp',
-    images: ['Artist_Photo_BW.webp', 'KeYuan_plate.webp', 'Artist_CV_Photo.webp'],
+    image: 'Artist_Photo_BW_blur.webp',
+    // 暫時用模糊版，新照片拍好後換掉（原檔 Artist_Photo_BW.webp、Artist_CV_Photo.webp 還在）
+    images: ['Artist_Photo_BW_blur.webp', 'KeYuan_plate.webp', 'Artist_CV_Photo_blur.webp'],
     ratio: 'port',
     tag: 'Artist',
     title: { en: 'Artist Photos', zh: '藝術家個人照片', fr: 'Photos de l’artiste' },
