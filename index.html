@@ -58,6 +58,7 @@
     // 開頁前先套用記住的模式，避免畫面閃一下
     try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -120,7 +121,7 @@
 <div class="work-page" id="workPage">
   <div class="book">
     <div class="book-left" id="bookLeft">
-      <img id="workImg" src="" alt="" />
+      <img id="workImg" alt="" />
       <button class="img-nav-btn" id="imgPrev">&#8249;</button>
       <button class="img-nav-btn" id="imgNext">&#8250;</button>
       <div class="img-dots" id="imgDots"></div>
